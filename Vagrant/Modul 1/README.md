@@ -18,15 +18,22 @@ Soal :
 2. Untuk nomor 2 dan 3 merupakan analisa terhadap suatu masalah, jawablah pertanyaan diatas dan tulis pada laporan.
 
 
-## A. Dasar Teori
-### 1. Virtualiasi
-Virtualisasi adalah teknologi untuk membuat sistem operasi dapat berjalan pada lingkungan virtual. Virtualisasi memungkinkan berjalannya beberapa sistem operasi pada satu komputer fisik yang sama pada waktu yang bersamaan. Sistem operasi yang berjalan pada virtualisasi terisolasi dari lingkungan sistem operasi komputer fisiknya, sehingga jika terjadi gangguan pada sistem operasi virtual tidak akan menggangu komputer fisik/host nya. Beberapa contoh teknologi virtualisasi antara lain virtualbox, vmware, vagrant , dan docker.
+## A. Cara Main
+### 1. Install Vagrant 3 biji
+	- Set up 3 Vagrant. 1 Load balancer + Worker.
+	
 
-### 2. Provisioning
-Provisioning adalah proses penyediaan aplikasi atau layanan pada komptuasi awan. Provisioning seringkali dilakukan menggunakan virtualisasi. Proses provisioning terdiri dari pembuatan instance virtualisasi, konfigurasi sumber daya, instalasi sistem operasi, instalasi aplikasi atau layanan, dan konfigurasi apliaksi atau layanan yang digunakan. Proses provisioning sering kali menggunakan virtualisasi karena dalam komputasi awan tidak boleh ada down time/layanan mati dalam waktu yang cukup lama. Dengan virtualisasi, proses provisioning menjadi lebih cepat dan mengurangi down time hingga layanan cloud terkesan memiliki zero down time.
+### 2. Provisioning Install software
+	- Load Balancer : 
+		# `apt-get install nginx -y`
+		# `apt-get install php7.0-fpm -y`
+
+	- Worker :
+		# `apt-get install apache2`
+		# `apt-get install libapache2-mod-php7.0 php7.0-fpm -y`
 
 
-### 3. Vagrant
+### 3. Setup Worker ama Load Balancer nya
 Vagrant adalah kerangka kerja untuk mengelola virtualisasi. Vagrant menciptakan lingkungan virtual yang terisolasi. Vagrant sering digunakan oleh developer yang bekerja dalam sebuah tim. Vagrant memastikan lingkungan pengembangan antar developer sama dan konsisten, sehingga menghilangkan istilah “Ini bekerja pada sistem saya”. Vagrant juga digunakan pada proses provisioning/penyediaan layanan. Vagrant mendukung banyak provider virtualisasi seperti virtualbox, vmware, aws, dan docker.
 
 
