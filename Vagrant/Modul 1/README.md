@@ -89,3 +89,4 @@ konsep Least connection yaitu membagi beban kerja berdasarkan banyaknya koneksi 
 Menggunakan IP source dan destination dari klien dan server untuk men-generate hash key menjadi kode yang unik. Kode ini digunakan untuk mengalokasikan klien ke server tertentu. Metode ini dapat memastikan bahwa klien akan terhubung dengan server yang sama yang sebelumnya sudah terhubung. 
 
 ## 3. Bagaimana mengatasi sebuah session ketika kita melakukan load balancing?
+Dalam load balancing, dikenal sebuah metode/algoritma bernama NetScaler. Sticky session dapat menetapkan stau server ke pengguna tertentu (berdasarkan session pengguna tertentu). Server yang ditetapkan diingat oleh router untuk memastikan bahwa semua request kedepan untuk session yang sama dikirimkan ke server yang sama.
