@@ -21,7 +21,14 @@ Soal :
 ## A. Cara Main
 ### 1. Install Vagrant 3 biji
 	- Set up 3 Vagrant. 1 Load balancer + Worker.
-	-- Pakai Ubuntu 16.04 (Xenial64)
+	-- Edit pada Vagrantfile pada semua vagrant , bedakan ip_private masing - masing vagrant nya seperti contoh berikut 
+	-- load balancer : 
+		# config.vm.network "private_network", ip: "192.168.0.2"
+	-- Worker 1 dan 2 
+		# config.vm.network "private_network", ip: "192.168.0.3"
+		# config.vm.network "private_network", ip: "192.168.0.4"  
+	-- Pakai Ubuntu 16.04 (Xenial64) untuk suport php 7 
+	
 	
 
 ### 2. Provisioning Install software
@@ -44,3 +51,5 @@ Soal :
 		# Set up LB nya di file default di /etc/nginx/sites-available/ (yang sudah di SYMLINK) dengan tambahan kode berikut :
 
 		ISI DISINI FILE CONFIGNYA
+
+### 4. 
