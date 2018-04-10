@@ -18,8 +18,8 @@ Soal :
 2. Untuk nomor 2 dan 3 merupakan analisa terhadap suatu masalah, jawablah pertanyaan diatas dan tulis pada laporan.
 
 
-## A. Cara Main
-### 1. Install Vagrant 3 biji
+## 1. Cara Main
+### 1.1. Install Vagrant 3 biji
 	- Set up 3 Vagrant. 1 Load balancer + Worker.
 		-- Edit pada Vagrantfile pada semua vagrant , bedakan ip_private masing - masing vagrant nya 		   seperti contoh berikut 
 			-- load balancer : 
@@ -32,7 +32,7 @@ Soal :
 	
 	
 
-### 2. Provisioning Install software
+### 1.2. Provisioning Install software
 	- Load Balancer : 
 		# apt-get install nginx -y
 		# apt-get install php7.0-fpm -y
@@ -42,7 +42,7 @@ Soal :
 		# apt-get install libapache2-mod-php7.0 php7.0-fpm -y
 
 
-### 3. Setup Worker ama Load Balancer nya
+### 1.3. Setup Worker sama Load Balancer nya
 	- Worker : 
 		Set up worker nya biar bisa baca file PHP. Edit /etc/apache2/mods-enabled/ pada kedua worker menjadi :
 
@@ -77,4 +77,15 @@ Soal :
 				    server 192.168.0.4;
 				}
 
-### 4. 
+## 2. Analisa apa perbedaan load balancing round-robin, least-connected, dan ip-hash
+
+### Round Robin 
+	- konsep dasar dari algoritma ini yaitu dengan menggunakan time sharing. membagi beban kerja sesuai antrian. misal ada 4 server, a b c d maka beban akan dibagi dari a - d kemudian balik lagi ke a sampai habis dibagikan. 
+
+### Least Connection 
+	- konsep Least connection yaitu membagi beban kerja berdasarkan banyaknya koneksi yang sedang dilayani oleh sebuah server yang aktif. Algoritma penjadwalan ini termasuk dalam penjadwalan dinamik, dimana memerlukan perhitungan koneksi yang aktif untuk masing-masing real server. Misal, ada 2 server yaitu A dan B. Koneksi aktif pada server A berjumlah 2 koneksi, koneksi aktif pada server B berjumlah 5 koneksi, maka beban kerja akan diberikan kepada server A karena koneksi aktif server A lebih sedikit dibanding B.
+
+### IP Hash 
+	- Menggunakan IP source dan destination dari klien dan server untuk men-generate hash key menjadi kode yang unik. Kode ini digunakan untuk mengalokasikan klien ke server tertentu. Metode ini dapat memastikan bahwa klien akan terhubung dengan server yang sama yang sebelumnya sudah terhubung. 
+
+## 3. Bagaimana mengatasi sebuah session ketika kita melakukan load balancing?
