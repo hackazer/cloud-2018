@@ -44,37 +44,37 @@ Soal :
 
 ### 3. Setup Worker ama Load Balancer nya
 	- Worker : 
-		Set up worker nya biar bisa baca file PHP. Edit /etc/apache2/mods-enabled/ pada kedua worker :
+		Set up worker nya biar bisa baca file PHP. Edit /etc/apache2/mods-enabled/ pada kedua worker menjadi :
 
 		<IfModule mod_dir.c>
-        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml inde$
+        	DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 		</IfModule>
 
 	- Load Balancer :
-		Set up LB nya di file default di /etc/nginx/sites-available/ (yang sudah di SYMLINK) dengan tambahan kode berikut :
+		> Set up LB nya di file default di /etc/nginx/sites-available/ (yang sudah di SYMLINK) dengan tambahan kode berikut :
 
-	- Tambahkan method untuk load balancing seperti berikut pada konfigurasi nginx di load balancer nya
-		## ip_hash
+		> Tambahkan method untuk load balancing seperti berikut pada konfigurasi nginx di load balancer nya
+			## ip_hash
 
-			upstream workers {
-		    ip_hash;
-		    server 192.168.0.3;
-		    server 192.168.0.4;
-			}
-
-		## least_conn
-
-			upstream workers {
-			    least_conn;
+				upstream workers {
+			    ip_hash;
 			    server 192.168.0.3;
 			    server 192.168.0.4;
-			}
+				}
 
-		## round_robin 
+			## least_conn
 
-			upstream workers {
-			    server 192.168.0.3;
-			    server 192.168.0.4;
-			}
+				upstream workers {
+				    least_conn;
+				    server 192.168.0.3;
+				    server 192.168.0.4;
+				}
+
+			## round_robin 
+
+				upstream workers {
+				    server 192.168.0.3;
+				    server 192.168.0.4;
+				}
 
 ### 4. 
