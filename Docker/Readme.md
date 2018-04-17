@@ -27,7 +27,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >
 >WORKDIR reservasi
 >RUN pip install -r install.txt
-
+>
 >CMD python server.py
 >
 >EXPOSE 80
@@ -48,7 +48,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 **Buat image dengan perintah** :  `docker build -t mysql_reservasi`
 
-### Membuat file `docker-compose.yml`
+#### Membuat file `docker-compose.yml`
 > Set untuk worker, balancer nya disini
 
 `lorem ipsum hehehe
