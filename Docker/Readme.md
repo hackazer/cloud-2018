@@ -13,7 +13,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 	
 
 ### 2. Buat Dockerfile sesuai kebutuhan
-> **Dockerfile 1** : Untuk Web Python Flask nya
+- **Dockerfile 1** : Untuk Web Python Flask nya
 		
 >FROM ubuntu:16.04
 >
@@ -34,7 +34,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 **Buat image dengan command** :	`docker build -t reservasi`
 
-> **Dockerfile 2** : Untuk setup MySQL
+- **Dockerfile 2** : Untuk setup MySQL
 
 > FROM mysql:5.7
 >
@@ -46,3 +46,22 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >
 >COPY ./reservasi.sql /docker-entrypoint-initdb.d
 
+**Buat image dengan perintah** :  `docker build -t mysql_reservasi`
+
+### Membuat file `docker-compose.yml`
+> Set untuk worker, balancer nya disini
+
+`lorem ipsum hehehe
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+`
+
+
+
+
+
+
+
+
+
+
+`
