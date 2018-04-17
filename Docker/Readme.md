@@ -26,7 +26,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >RUN wget https://cloud.fathoniadi.my.id/reservasi.zip && unzip reservasi.zip
 >
 >WORKDIR reservasi
->RUN pip install -r install.txt
+>RUN pip install -r req.txt
 >
 >CMD python server.py
 >
