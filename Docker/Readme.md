@@ -37,22 +37,33 @@ Memanfaatkan Docker untuk Load Balancing (?)
 - **Dockerfile 2** : Untuk setup MySQL
 
 
-`FROM mysql:5.7
+```
+FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD passwordawan
 ENV MYSQL_USER userawan
 ENV MYSQL_PASSWORD buayakecil
-ENV MYSQL_DATABASE reservasi
-``
-COPY ./reservasi.sql /docker-entrypoint-initdb.d`
+ENV MYSQL_DATABASE reservasi`
+
+COPY ./reservasi.sql /docker-entrypoint-initdb.d
+```
 
 **Buat image dengan perintah** :  `docker build -t mysql_reservasi`
 
 #### Membuat file `docker-compose.yml`
 > Set untuk worker, balancer nya disini
 
-`lorem ipsum hehehe
+```
+lorem ipsum hehehe
 Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-`
+
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+```
 
 
 
