@@ -33,7 +33,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 		EXPOSE 80
 
-#### Buat image dengan command : docker build -t reservasi
+#### Buat image dengan command : > docker build -t reservasi
 
 	- Dockerfile 2 : Untuk setup MySQL
 
