@@ -36,15 +36,14 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 - **Dockerfile 2** : Untuk setup MySQL
 
-> FROM mysql:5.7
->
->ENV MYSQL_ROOT_PASSWORD passwordawan
->
->ENV MYSQL_USER userawan
->ENV MYSQL_PASSWORD buayakecil
->ENV MYSQL_DATABASE reservasi
->
->COPY ./reservasi.sql /docker-entrypoint-initdb.d
+
+`FROM mysql:5.7
+ENV MYSQL_ROOT_PASSWORD passwordawan
+ENV MYSQL_USER userawan
+ENV MYSQL_PASSWORD buayakecil
+ENV MYSQL_DATABASE reservasi
+``
+COPY ./reservasi.sql /docker-entrypoint-initdb.d`
 
 **Buat image dengan perintah** :  `docker build -t mysql_reservasi`
 
