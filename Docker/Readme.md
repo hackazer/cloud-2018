@@ -32,7 +32,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >
 >EXPOSE 80
 
-**Buat image dengan command** :	`docker build -t reservasi`
+***Buat image dengan command*** :	`docker build -t reservasi`
 
 - **Dockerfile 2** : Untuk setup MySQL
 
@@ -46,7 +46,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >
 >COPY ./reservasi.sql /docker-entrypoint-initdb.d
 
-**Buat image dengan perintah** :  `docker build -t mysql_reservasi`
+***Buat image dengan perintah*** :  `docker build -t mysql_reservasi`
 
 
 - **Membuat file docker-compose.yml**
