@@ -51,7 +51,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 - **Membuat file docker-compose.yml**
 > Buat file docker-composer.yml seperti pada file github
-> [link] (https://github.com/hackazer/cloud-2018/blob/master/Docker/File/docker-compose.yml)
+> [link](https://github.com/hackazer/cloud-2018/blob/master/Docker/File/docker-compose.yml)
 
 
 
