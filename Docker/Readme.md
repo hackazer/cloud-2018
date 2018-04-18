@@ -55,7 +55,7 @@ Memanfaatkan Docker untuk Load Balancing (?)
 
 
 
-
+- *** Jangan lupa jalankan perintah docker-compose up -d untuk menjalankan docker compose***
 
 
 
