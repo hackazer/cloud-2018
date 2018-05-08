@@ -1,0 +1,76 @@
+version: '3'
+services:
+    worker1:
+        container_name: reservasi-worker1
+        image: reservasi
+        depends_on:
+            - db
+        environment:
+            DB_HOST: 192.168.0.24
+            DB_NAME: reservasi
+            DB_USERNAME: userawan
+            DB_PASSWORD: buayakecil
+        networks:
+            reservasi:
+                ipv4_address: 192.168.0.21
+    worker2:
+        container_name: reservasi-worker2
+        image: reservasi
+        depends_on:
+            - db
+        environment:
+            DB_HOST: 192.168.0.24
+            DB_NAME: reservasi
+            DB_USERNAME: userawan
+            DB_PASSWORD: buayakecil
+        networks:
+            reservasi:
+                ipv4_address: 192.168.0.22
+    worker3:
+        container_name: reservasi-worker3
+        image: reservasi
+        depends_on:
+            - db
+        environment:
+            DB_HOST: 192.168.0.24
+            DB_NAME: reservasi
+            DB_USERNAME: userawan
+            DB_PASSWORD: buayakecil
+        networks:
+            reservasi:
+                ipv4_address: 192.168.0.23
+    db:
+        container_name: reservasi-db
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: reservasi
+            MYSQL_USER: userawan
+            MYSQL_PASSWORD: buayakecil
+        volumes:
+            - ./.mysql_data:/var/lib/mysql
+            - ./reservasi/reservasi.sql:/docker-entrypoint-initdb.d/reservasi.sql
+        networks:
+            reservasi:
+                ipv4_address: 192.168.0.24
+    balancer:
+        container_name: reservasi-balancer
+        image: nginx
+        depends_on:
+            - worker1
+            - worker2
+            - worker3
+        ports:
+            - 5000:80
+        volumes:
+            - ./balancer.conf:/etc/nginx/conf.d/default.conf
+        networks:
+            reservasi:
+                ipv4_address: 192.168.0.25
+volumes:
+    reservasi:
+networks:
+    reservasi:
+        ipam:
+            config:
+                - subnet: 192.168.0.0/24

@@ -32,44 +32,30 @@ Memanfaatkan Docker untuk Load Balancing (?)
 >
 >EXPOSE 80
 
-**Buat image dengan command** :	`docker build -t reservasi`
+***Buat image dengan command*** :	`docker build -t reservasi`
 
 - **Dockerfile 2** : Untuk setup MySQL
 
 
-```
-FROM mysql:5.7
-ENV MYSQL_ROOT_PASSWORD passwordawan
-ENV MYSQL_USER userawan
-ENV MYSQL_PASSWORD buayakecil
-ENV MYSQL_DATABASE reservasi`
 
-COPY ./reservasi.sql /docker-entrypoint-initdb.d
-```
+>FROM mysql:5.7
+>ENV MYSQL_ROOT_PASSWORD passwordawan
+>ENV MYSQL_USER userawan
+>ENV MYSQL_PASSWORD buayakecil
+>ENV MYSQL_DATABASE reservasi`
+>
+>COPY ./reservasi.sql /docker-entrypoint-initdb.d
 
-**Buat image dengan perintah** :  `docker build -t mysql_reservasi`
+***Buat image dengan perintah*** :  `docker build -t mysql_reservasi`
 
-#### Membuat file `docker-compose.yml`
-> Set untuk worker, balancer nya disini
 
-```
-lorem ipsum hehehe
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-```
+- **Membuat file docker-compose.yml**
+> Buat file docker-composer.yml seperti pada file github
+> [link](https://github.com/hackazer/cloud-2018/blob/master/Docker/File/docker-compose.yml)
 
 
 
-
-
-
+- *** Jangan lupa jalankan perintah docker-compose up -d untuk menjalankan docker compose***
 
 
 
