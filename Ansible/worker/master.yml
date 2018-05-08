@@ -1,0 +1,16 @@
+- hosts: worker
+  become: yes
+  pre_tasks:
+    - name: uninstall apache2
+      apt: name=apache2 state=absent
+
+  roles:
+    - { role: nginx }
+    - { role: php7.2 }
+    - { role: git }
+    - { role: composer }
+
+  vars:
+    sites: hackathon
+    user_git: hackazer
+    path_to_app: /var/www/web
