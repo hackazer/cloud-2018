@@ -13,4 +13,4 @@
   vars:
     sites: hackathon
     user_git: hackazer
-    path_to_app: /var/www/web
+    path_to_app: /var/www/web/Hackathon
