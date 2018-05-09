@@ -50,16 +50,16 @@ $ ansible-playbook -vvv -i hosts master2.yml -k
 4. If everything is success, there will be no '`failed`' task/things showed up~
 
 
-![](assets/master2 - 1.png)
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%201.png)
 
-![](assets/master2 - 2.png )
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%202.png)
 
 **WORKER 1**
 
-![](assets/master2 - worker1new.png)
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20worker1new.png)
 
 **WORKER 2**
-![](assets/master2 - worker2.png)
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20worker2.png)
 
 **Remote MariaDB / MySQL**
-![](assets/master2 - mysqlremote.png)
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20mysqlremote.png)
