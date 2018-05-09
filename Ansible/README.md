@@ -17,7 +17,7 @@
 
 5. Setup root directory nginx ke folder Laravel hasil clone repo diatas
 
-------------------------------------------------------------------------------------------
+
 
 # Ansible
 
