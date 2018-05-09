@@ -1,9 +1,8 @@
 # cloud-2018
 
 Group Member :
->Rizaldy Primanta Putra - 05111540000046
-<br>
->Brama Diwangkara - 05111540000150
+>Rizaldy Primanta Putra - 05111540000046 ||
+ >Brama Diwangkara - 05111540000150
 
 Check Branch for Assignment
 
