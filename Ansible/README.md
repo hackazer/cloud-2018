@@ -49,3 +49,17 @@ $ ansible-playbook -vvv -i hosts master2.yml -k
 ```
 4. If everything is success, there will be no '`failed`' task/things showed up~
 
+
+![exec](img/master2 - 1.png "exec")
+
+![exec2](img/master2 - 2.png "exec2")
+
+**WORKER 1**
+
+![home](img/master2 - worker1new.png "home")
+
+**WORKER 2**
+![home2](img/master2 - worker2.png "home2")
+
+**Remote MariaDB / MySQL**
+![mysql](img/master2 - mysqlremote.png "mysql")
