@@ -64,10 +64,6 @@ $ ansible-playbook -vvv -i hosts master2.yml -k
 **Remote MariaDB / MySQL**
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20mysqlremote.png)
 
-**Select user , host from mysql.user;**
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/usermysql.png)
 
-
-
-**Show tables ;**
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/tablesmysql.png)
