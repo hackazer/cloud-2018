@@ -16,3 +16,36 @@
 4. Clone [https://github.com/udinIMM/Hackathon](https://github.com/udinIMM/Hackathon) pada setiap worker dan setup database pada .env mengarah ke DB server.
 
 5. Setup root directory nginx ke folder Laravel hasil clone repo diatas
+
+------------------------------------------------------------------------------------------
+
+# Ansible
+
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+# Cara Main!
+
+**NOTES :**
+  - OS 1 : Ubuntu 16.04-Server as a worker
+  - OS 2 : Debian 9-Server as a DB Server 
+  - Virtual Box for installing those 2 OS, and assuming you'd install it on them both already, let's move on~
+ 
+**-- Prerequisites**
+1. In the VM  (Ubuntu / Worker) install `openssh-server`, `ansible`, `sshpass` so you can connect into the VM thru SSH via your own PC.
+```sh 
+$ sudo apt-get install openssh-server ansible sshpass
+```
+
+2. Then open up file `sshd_config` in `/etc/ssh/sshd_config`, and edit some code to match this line
+```sh
+    # Edit it / delete the word like -prohibit=password, and change it to yes
+PermitRootLogin yes
+RSAAuthentication yes
+```
+
+3. Run the ansible-playbook yaml file :)
+```sh
+$ ansible-playbook -vvv -i hosts master2.yml -k
+```
+4. If everything is success, there will be no '`failed`' task/things showed up~
+
