@@ -9,7 +9,7 @@ Check Branch for Assignment
 <br>
 		Link Vagrant - 1 : <a href="https://docs.google.com/document/d/1SRv1cg1ULWmcL0hHxZp77hrcgi1uTjm2jD3etBNSlx8/edit">Dokumentasi Vagrant</a>
 		<br>
-		Link Nginx - 2 : <a href="https://github.com/hackazer/cloud-2018/tree/master/Vagrant/Modul%201"> Dokumentasi Nginx</a>
+		Link Nginx - 2 : <a href="https://github.com/hackazer/cloud-2018/tree/master/Nginx"> Dokumentasi Nginx</a>
 		<br>
 		Link Docker - 3 : <a href="https://github.com/hackazer/cloud-2018/tree/master/Docker">Dokumentasi Docker</a>
 		<br>
