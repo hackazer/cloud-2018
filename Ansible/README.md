@@ -65,7 +65,9 @@ $ ansible-playbook -vvv -i hosts master2.yml -k
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20mysqlremote.png)
 
 **Select user , host from mysql.user;**
+\n
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/usermysql.png)
 
 **Show tables ;**
+\n
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/tablesmysql.png)
