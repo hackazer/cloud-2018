@@ -12,7 +12,7 @@
     2.4. Install Git
 
     dan pastikan worker dapat menjalankan Laravel 5.6
-    
+
 4. Clone [https://github.com/udinIMM/Hackathon](https://github.com/udinIMM/Hackathon) pada setiap worker dan setup database pada .env mengarah ke DB server.
 
 5. Setup root directory nginx ke folder Laravel hasil clone repo diatas
@@ -27,12 +27,12 @@
 
 **NOTES :**
   - OS 1 : Ubuntu 16.04-Server as a worker
-  - OS 2 : Debian 9-Server as a DB Server 
+  - OS 2 : Debian 9-Server as a DB Server
   - Virtual Box for installing those 2 OS, and assuming you'd install it on them both already, let's move on~
- 
+
 **-- Prerequisites**
 1. In the VM  (Ubuntu / Worker) install `openssh-server`, `ansible`, `sshpass` so you can connect into the VM thru SSH via your own PC.
-```sh 
+```sh
 $ sudo apt-get install openssh-server ansible sshpass
 ```
 
@@ -63,3 +63,7 @@ $ ansible-playbook -vvv -i hosts master2.yml -k
 
 **Remote MariaDB / MySQL**
 ![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/assets/master2%20-%20mysqlremote.png)
+  - Select user , host from mysql.user;
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/usermysql.png)
+  - Show tables ;
+![](https://raw.githubusercontent.com/hackazer/cloud-2018/master/Ansible/roles/db/tablesmysql.png)
