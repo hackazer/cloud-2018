@@ -1,0 +1,6 @@
+---
+- include : pre_task.yml
+- include : software.yml
+- include : git.yml
+- include : composer.yml
+- include : nginx.yml

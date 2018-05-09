@@ -1,0 +1,16 @@
+- hosts: worker
+  become: yes
+  pre_tasks:
+    - name: uninstall apache2
+      apt: name=apache2 state=absent
+  roles:
+    - { role: worker }
+    
+
+# - hosts: db
+#   vars:
+#     username: 'regal'
+#     password: 'bolaubi'
+#   roles:
+#     - { role: db }
+

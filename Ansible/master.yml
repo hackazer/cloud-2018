@@ -23,3 +23,6 @@
     password: 'bolaubi'
   roles:
     - { role: db }
+
+
+    #### File diatas jika menggunakan proxy its, kita set env / var buat set proxy pakai vpn its ya. 

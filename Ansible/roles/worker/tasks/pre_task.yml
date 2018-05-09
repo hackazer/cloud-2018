@@ -1,0 +1,7 @@
+- name: add repo
+  become: yes
+  apt_repository: repo='ppa:ondrej/php' state=present
+
+- name: apt update
+  apt:
+    update_cache: yes

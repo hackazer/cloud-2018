@@ -1,0 +1,10 @@
+- name: composer install
+  become: yes
+  command: composer install -d /var/www/web/Hackathon/
+
+- name: composer
+  command: "{{ item }} chdir=/var/www/web/Hackathon"
+  with_items:
+  - chmod -R 777 ./storage
+  - php artisan key:generate
+  - php artisan migrate

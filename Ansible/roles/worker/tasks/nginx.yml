@@ -1,0 +1,13 @@
+- name: nginx
+  become: yes
+  template: 
+   src=nginx
+   dest='/etc/nginx/sites-available/default'
+  notify: nginx restart
+
+- name: nginx 2
+  become: yes
+  template: 
+   src=nginx
+   dest='/etc/nginx/sites-enabled/default'
+  notify: nginx restart
